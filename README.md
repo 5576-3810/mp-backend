@@ -41,8 +41,6 @@ Incluye:
   - `sp_obtener_logs`
   - `sp_estadisticas_fiscales`
 
-## 🧪 Pruebas con Postman
 
-### 🔹 Obtener fiscales
 
 
