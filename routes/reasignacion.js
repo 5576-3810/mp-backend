@@ -20,5 +20,16 @@ router.post('/', async (req, res) => {
     res.status(500).send('Error');
   }
 });
+router.get('/logs', async (req, res) => {
+  try {
+    const pool = await poolPromise;
+    const result = await pool.request().query('SELECT * FROM LogReasignacion');
+    res.json(result.recordset);
+  } catch (err) {
+    console.error('Error al obtener logs:', err);
+    res.status(500).send('Error al obtener logs');
+  }
+});
+
 
 module.exports = router;
