@@ -3,7 +3,8 @@ const router = express.Router();
 const { poolPromise } = require('../db');
 
 // Obtener fiscales
-router.get('/fiscales', async (req, res) => {
+router.get('/obtenerfiscalesporfiscalia', async (req, res) => {
+  console.log();
   try {
     const pool = await poolPromise;
     const result = await pool.request().query('SELECT * FROM Fiscal');
